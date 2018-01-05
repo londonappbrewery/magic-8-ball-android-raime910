@@ -1,13 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:id="@+id/activity_main"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingTop="16dp"
-    android:paddingBottom="16dp"
-    tools:context=".MainActivity">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/activity_main"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/bg"
+	android:paddingBottom="16dp"
+	android:paddingLeft="16dp"
+	android:paddingRight="16dp"
+	android:paddingTop="16dp"
+	tools:context=".MainActivity">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_alignParentEnd="true"
+		android:layout_alignParentRight="true"
+		android:layout_alignParentTop="true"
+		android:layout_marginEnd="9dp"
+		android:layout_marginRight="9dp"
+		android:orientation="vertical">
+
+		<TextView
+			android:id="@+id/txtIntro"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="50dp"
+			android:layout_marginTop="50dp"
+			android:layout_weight="1"
+			android:elevation="1dp"
+			android:gravity="center"
+			android:padding="10dp"
+			android:text="@string/intro_text"
+			android:textColor="@android:color/white"
+			android:textSize="18sp"
+			android:textStyle="bold" />
+
+		<ImageView
+			android:id="@+id/imgEightBall"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="false"
+			android:layout_centerInParent="false"
+			android:layout_centerVertical="false"
+			android:layout_weight="1"
+			app:srcCompat="@drawable/ball1" />
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="bottom">
+
+			<Button
+				android:id="@+id/btnGetAnswer"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:background="@color/button_color"
+				android:elevation="0dp"
+				android:text="@string/button_text"
+				android:textColor="@android:color/background_light" />
+		</RelativeLayout>
+
+	</LinearLayout>
 </RelativeLayout>
